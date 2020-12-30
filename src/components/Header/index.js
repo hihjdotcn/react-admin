@@ -1,45 +1,28 @@
 import React from 'react'
+import {withRouter} from 'react-router'
 
-class Clock extends React.Component {
+import './index.css'
+
+class Header extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {date: new Date()}
-    // 为了在回调中使用 `this`，这个绑定是必不可少的
-    this.activeLasers = this.activeLasers.bind(this)
+    this.state = {}
   }
-
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    )
+  handleLogout () {
+    this.props.history.push('/login')
   }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID)
-  }
-
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
-
-  activeLasers () {
-    console.log(this)
-  }
-
   render() {
     return (
-      <div>
-        <h1>Hello, World</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        <button onClick={this.activeLasers}>
-          Activate Lasers
-        </button>
+      <div className="header-wrap">
+        <div className="left-part">
+          <div className="user-info-wrap">用户信息</div>
+          <div>操作按钮</div>
+        </div>
+        <div>管理平台</div>
+        <div className="logout-button" onClick={this.handleLogout.bind(this)}>登出</div>
       </div>
     )
   }
 }
 
-export default Clock
+export default withRouter(Header)

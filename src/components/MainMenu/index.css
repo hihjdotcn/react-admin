@@ -1,0 +1,8 @@
+.nav-wrap nav a{
+  padding:0 10px;
+}
+
+.el-menu-vertical-demo{
+  width: 200px;
+  height: 100%;
+}

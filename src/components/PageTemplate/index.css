@@ -1,0 +1,20 @@
+.page-wrap{
+  height: 100%;
+}
+.main{
+  display: flex;
+  height: 100%;
+  margin-top: -50px;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+.left-part{
+  display: flex;
+}
+.user-info-wrap{
+  width: 200px;
+}
+.logout-button{
+  padding: 0 20px;
+  cursor: pointer;
+}
