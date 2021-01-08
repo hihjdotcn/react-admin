@@ -1,6 +1,8 @@
+import mystyle from './index.scss'
+
 const Login = () => 
-    <section>
+    <div className={`${mystyle.loginWrap}`}>
         <h1>Login page</h1>
-    </section>
+    </div>
 
 export default Login
