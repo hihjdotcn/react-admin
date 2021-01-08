@@ -5,8 +5,8 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Home from './views/Home/index.jsx'
-import Login from './views/Login/index.jsx'
+import Home from './views/Home/index.js'
+import Login from './views/Login/index.js'
 import Products from './views/Products/index.jsx'
 import Whoops404 from './views/whoops404'
 
